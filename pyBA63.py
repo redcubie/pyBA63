@@ -20,7 +20,7 @@ def SetCountryCode(number):
 	ser.write(value) # Write value to serial
 
 def SetCursor(x, y):
-	value = bytearray([27, 91, y, 59, x, 72]) #\x1B\x5B y \x3B x \x48 - Set Cursor Position
+	value = b'\x1b['+str(y).encode('ascii')+b';'+str(x).encode('ascii')+b'H' #\x1B\x5B y \x3B x \x48 - Set Cursor Position
 	ser.write(value) # Write value to serial
 
 def WriteData(data):
