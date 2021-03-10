@@ -30,4 +30,4 @@ def WriteData(data):
 
 def clear():
 	ser.write(const.CLR) # Write clear to serial
-	SetCursor(0, 0) # Set cursor to beginning
+	SetCursor(1, 1) # Set cursor to beginning
